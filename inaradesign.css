@@ -1,0 +1,352 @@
+/*HOME PAGE*/
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Cinzel", serif;
+}
+h1{
+	text-shadow: 3px 3px 3px #ababab;
+	font-family: "Cinzel", sans-serif;
+}
+.banner{
+	width: 100%;
+	height: 100vh;
+	background-image: url(images/bg2.png);
+	background-size: cover;
+	background-position: center;
+	transition: filter 0.3s ease-in-out;
+}
+.navbar{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo{
+	width: 300px;
+	cursor: pointer;
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase ;
+}
+.navbar ul li::after{
+     content: '';
+     height: 3px;
+     width: 0;
+     background: #ED9D03;
+     position: absolute;
+     left: 0;
+     bottom: -10px;
+     transition: 0.5s;
+
+}
+.navbar ul li:hover:after{
+	width: 100%;
+}
+.content{
+	width: 100%;
+	margin-top: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.dropdown-menu{
+	display: none;
+	margin: 10px;
+	border-radius: 25px;
+}
+.dropdown-menu ul li a{
+  text-decoration: none;
+	color: black;
+}
+.navbar ul li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -15px;
+    background: linear-gradient(#f8f6f6,#e8910c);
+}
+.navbar ul li:hover .dropdown-menu ul{
+	display: block;
+	margin: 10px;
+}
+.navbar ul li:hover .dropdown-menu ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px slategray; #fff;
+    background: transparent;
+    border-radius: 25px;
+    text-align: left;
+}F
+.fa-caret-down{
+	float: right;
+	margin: 0 10px;
+}
+.fa-shopping-cart{
+	float: right;
+	margin: 0 10px;
+}
+button{
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 2px solid #ED9D03;
+	background: transparent;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+span{
+	background: linear-gradient(#f8f6f6,#e8910c);
+	height: 100%;
+	width: 0;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+button:hover span{
+	width: 100%;
+}
+button:hover{
+	border: none;
+}
+.button-duo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-duo button {
+  margin-right: 10px; /* Add some spacing between the buttons */
+  width: 150px;
+  padding: 10px 20px; /* Adjust the padding as needed */
+}
+.btn{
+	color: white;
+}
+.blur{
+	filter: blur(5px);
+
+}
+.popup {
+    width: 400px;
+    background: black;
+    border-radius: 6px;
+    position: fixed; /* Change position to fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center;
+    padding: 20px 30px 30px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    margin-top: 0; /* Adjust margin-top as needed */
+    transition: transform 0.6s ease-in-out;
+}
+.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup h2{
+	margin: 10px;
+	padding-top: 40px;
+}
+.popup img{
+	width: 200px;
+	margin: -50px;
+	border-radius: 50%;	
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.container{
+	padding: 30px;
+	margin-left: -20px;
+	text-align: left;
+}
+.signup-form p{
+	color: red;
+	display: inline-block;
+}
+footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+footer .fa {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: #ED9D03;
+}
+
+footer.fa:hover {
+    opacity: 0.7;
+}
+
+
+
+/*SERVICE PAGE */
+/**/
+/**/
+/**/
+/**/
+.services-banner{
+	width: 100%;
+	height: 100vh;
+	background-image: url(images/SERVICES.png);
+	background-size: cover;
+	background-position: center;
+}
+.services-content{
+	width: 100%;
+	margin-top:50px;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.services-selection{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+	text-align: center;
+	padding-top: 20px;
+	border-radius: 20px, 20px;
+	box-sizing: border-box;
+  margin: 20px;
+}
+.services-selection div{
+	height: 370px;
+	width: 335px;
+	background: linear-gradient(#f8f6f6,#e8910c);
+  margin: 60px;
+  padding: 50px 30px 30px;
+
+}
+.box1 ul input, .box2 ul input{
+    margin: 20px 0;
+
+}
+hr{
+	border: 1px solid #e8910c;
+}
+button a{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+/*SHOP PAGE */
+/**/
+/**/
+/**/
+/**/
+.shop-banner{
+	width: 100%;
+	height: 100vh;
+	background-image: url(images/SHOP.png);
+	background-size: cover;
+	background-position: center;
+}
+.shop-selection{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 200px;
+	text-align: center;
+	padding-top: -80px;
+	border-radius: 25px;
+	box-sizing: border-box;
+    margin: -40px;
+}
+.shop-selection div{
+	height: 200px;
+	width: 200px;
+	background: linear-gradient(#f8f6f6,#e8910c);
+    margin: 60px;
+    padding: 50px 30px 30px;
+
+}
+.shop-selection2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 200px;
+	text-align: center;
+	padding-top: -80px;
+	border-radius: 50px 20px;
+	box-sizing: border-box;
+  margin: -40px;
+    
+     
+}
+.shop-selection2 div{
+	height: 200px;
+	width: 200px;
+	background: linear-gradient(#f8f6f6,#e8910c);
+  margin: 60px;
+  padding: 50px 30px 30px;
+
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+
