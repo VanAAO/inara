@@ -5,10 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Inara-Services</title>
 	<link rel="icon" type="images/png" href="images/inara-favicon.png">
-	<link rel="stylesheet" href="inaradesign.css">
+	<link rel="stylesheet" href="services.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
 <div class="services-banner">
 		<div class="navbar">
 			<a href="landing.html"><img src="images/plainlogo.png" class="logo"></a>
@@ -36,32 +37,71 @@
 			</ul>
 
 		</div>
+                
+               <h1>Kindly select a service</h1>
 
-		<div class="services-content">
-			<h1>Kindly select your service choice</h1>
-        </div>  
+		<div class="bf-container">
+			<div class="bf-body">
+				<form class="bf-body-box" action="services.php" method="POST">
+					<div class="bf-row">
+						<div class="bf-col-6">
+							<p>Your Name</p>
+							<input type="text" name="name" id="name">
+						</div>
+						<div class="bf-col-6">
+							<p>Email Address</p>
+							<input type="email" name="email" id="email">
+						</div>
+						
+					</div>
 
-            <div class="services-selection">
-            	<div class="box1">
-            		<h2>Wigmaking</h2>
-            		<hr>
-            		<ul>
-            			<input type="radio">Frontal wig - GH200 </input><br>
-            			<input type="radio">Closure wig - GH100</input><br>
-            		</ul>
-            		<button type="button" class="btn"><a href="checkout.html">BOOK</a></button>
-            	</div>
 
-            	<div class="box2">
-            		<h2>Revamping</h2>
-            		<hr>
-            		<ul>
-            			<input type="radio">Frontal wig - GH200 </input><br>
-            			<input type="radio">Closure wig - GH100 </input><br>
-            		</ul>
-            		<button type="button" class="btn"><a href="checkout.html">BOOK</a></button>
-            	</div>
-            </div>
+                    <div class="bf-body-box">
+					<div class="bf-row">
+						<div class="bf-col-6">
+							<p>Select service</p>
+							<select name="service" id="dropdown-menu">
+								<option>Type of Service</option>
+								<option value="1">Wigmaking</option>
+								<option value="2">Revamping</option>
+							</select>
+						</div>
+						<div class="bf-col-6">
+							<p>Select number of wigs</p>
+							<select name="noofwigs" id="s-select">
+								<option>Select Number</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>	
+						</div>
+						
+					</div>
+
+					<div class="bf-row">
+						<div class="bf-col-12">
+							<p>Select date for delivery</p>
+							<input type="date" name="date" id="date">
+							<p>Message</p>
+							<textarea name="message" id="message" cols="10" rows="5"></textarea>
+						</div>
+					
+				</div>
+
+				<div class="bf-row">
+						<div class="bf-col-3">
+							<button type="submit" value="submit"><span></span>Book</button>
+						</div>
+					
+				</div>
+               
+					
+				</form>
+			</div>
+			
+		</div>
+
+</div>
 
 <footer>
      <a href="https://www.instagram.com/accounts/login/" class="fa fa-instagram"></a>

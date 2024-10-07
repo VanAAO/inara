@@ -1,13 +1,13 @@
 /*HOME PAGE*/
-
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 *{
 	margin: 0;
 	padding: 0;
-	font-family: "Cinzel", serif;
+	font-family:lato;
 }
 h1{
 	text-shadow: 3px 3px 3px #ababab;
-	font-family: "Cinzel", sans-serif;
+	font-family:lato;
 }
 .banner{
 	width: 100%;
@@ -224,7 +224,7 @@ footer.fa:hover {
 /**/
 /**/
 /**/
-.services-banner{
+/*.services-banner{
 	width: 100%;
 	height: 100vh;
 	background-image: url(images/SERVICES.png);
@@ -249,9 +249,12 @@ footer.fa:hover {
 	box-sizing: border-box;
   margin: 20px;
 }
+.h2{
+	padding-top: 80px;
+}
 .services-selection div{
-	height: 370px;
-	width: 335px;
+	height: 100px;
+	width: 105px;
 	background: linear-gradient(#f8f6f6,#e8910c);
   margin: 60px;
   padding: 50px 30px 30px;
@@ -259,6 +262,7 @@ footer.fa:hover {
 }
 .box1 ul input, .box2 ul input{
     margin: 20px 0;
+    padding-top: 140px;
 
 }
 hr{
@@ -293,14 +297,14 @@ button a{
 	padding-top: -80px;
 	border-radius: 25px;
 	box-sizing: border-box;
-    margin: -40px;
+  margin: -40px;
 }
 .shop-selection div{
 	height: 200px;
 	width: 200px;
 	background: linear-gradient(#f8f6f6,#e8910c);
-    margin: 60px;
-    padding: 50px 30px 30px;
+  margin: 60px;
+  padding: 50px 30px 30px;
 
 }
 .shop-selection2{

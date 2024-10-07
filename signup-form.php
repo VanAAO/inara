@@ -1,4 +1,9 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+
 $host = 'localhost';
 $username = 'root';
 $password = '';
@@ -41,10 +46,10 @@ if ($conn->connect_error) {
 
                 if ($conn->query($sql) === TRUE) {
                     // SMTP settings for Mailtrap
-                    $smtpUsername = '993af38d7ef7af';
-                    $smtpPassword = 'fdc060e5fcf607';
                     $smtpHost = 'sandbox.smtp.mailtrap.io';
                     $smtpPort = 2525;
+                    $smtpUsername = '30546dc7e71e17';
+                    $smtpPassword = '8a47d0f4b066c5';
 
                     // Recipient email address
                     $to = $email;
@@ -58,17 +63,21 @@ if ($conn->connect_error) {
                     // Email message
                     $message = 'Thank you for subscribing to our updates.';
 
-                    // Load PHPMailer
-                    require 'PHPMailerAutoload.php';
+                    // Include the PHPMailer library files
+                    require 'PHPMailer/src/Exception.php';
+                    require 'PHPMailer/src/PHPMailer.php';
+                    require 'PHPMailer/src/SMTP.php';
 
                     $mail = new PHPMailer;
 
                     $mail->isSMTP();
                     $mail->Host = $smtpHost;
                     $mail->SMTPAuth = true;
+                    $mail->Port = $smtpPort;
                     $mail->Username = $smtpUsername;
                     $mail->Password = $smtpPassword;
-                    $mail->Port = $smtpPort;
+                    
+                    $phpmailer = new PHPMailer();
 
                     $mail->setFrom($from, 'Inara Updates');
                     $mail->addAddress($to);
